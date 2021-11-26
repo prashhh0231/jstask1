@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tast 1</title>
+    <style>
+        #mainDiv{
+            background-color: yellow;
+            width: 400px;
+            height: 400px;
+        }
+        body{
+            background-color: whitesmoke;
+        }
+        button{
+            background-color: #e4e4e4;
+            border: none;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>This is task 1</h1>
+        <div id="mainDiv">
+        
+        </div><br>
+        <button onclick="resetConsole()">Clear console</button>
+    </center>
+</body>
+<script>
+    // rload page
+    
+    let resetConsole =()=>{
+        window.location.reload();
+    }
+    
+   let getEvent = document.getElementById("mainDiv"); //get event and store it on variable
+
+        // call event and respective function
+       getEvent.onclick = function(){onclickFunction()}
+       getEvent.onmouseover = function(){onmouseFunction()}
+       getEvent.onmouseenter = function(){onmouseEnterFunction()}
+       getEvent.ondblclick = function(){ondbclickFunction()}
+       getEvent.oncontextmenu = function(){oncontextmenuFunction()}
+        getEvent.onmousedown =function(){onmousedownFunction()}
+        getEvent.onmouseup =function(){onmouseupFunction()}
+
+        // when you click on particular div
+       let onclickFunction = ()=>{
+           console.log("event = onclick");
+       }
+    //    when you over mouse on particular div
+       let onmouseFunction = ()=>{
+           console.log("event = onmouseover");
+       }
+    //    when you over mouse on particular div
+       let onmouseEnterFunction =()=>{
+           console.log("event = onmouseenter");
+       }
+        //    when you right click  on particular div
+       let oncontextmenuFunction =()=>{
+           console.log("event = oncontexmenu (call it when you right click on div)");
+       }
+
+    //    when mouse button is at down 
+       let onmousedownFunction = () =>{
+           console.log("event = onmousedown")
+       }
+    //    when mouse button is at up
+       let onmouseupFunction = () =>{
+           console.log("event = onmouse up")
+       }
+    
+</script>
+</html>
